@@ -1,3 +1,9 @@
 tweepy
 configparser
 pymongo
+ipython
+pyzmq
+tornado
+numpy
+pandas
+vincent
