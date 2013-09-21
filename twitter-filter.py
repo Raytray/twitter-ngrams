@@ -18,7 +18,7 @@ access_token_secret = config.get('DEFAULT', 'ACCESS_TOKEN_SECRET')
 auth1 = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth1.set_access_token(access_token_key, access_token_secret)
 
-setTerms = ['mhacks', 'twitter']
+setTerms = ['mhacks']
 
 mongo = MongoClient()
 mongo_db = mongo['twitter_ngrams']
@@ -30,8 +30,7 @@ bad_tokens = ['.', '$'] # TODO: Do this in regex in tokenizer
 class StreamListener(tweepy.StreamListener):
     def on_status(self, tweet):
         try:
-            if insert_tweet(tweet):
-                print "inserting {}".format(tweet.text.encode('ascii', 'ignore'))
+            insert_tweet(tweet)
 
         except Exception, e:
             print e
@@ -43,6 +42,7 @@ class StreamListener(tweepy.StreamListener):
 
 def token_counter(def_dict, tweet):
     for token in tokenize(tweet.text.encode('ascii', 'ignore')):
+        token = token.strip().lower()
         if (token not in bad_tokens and # get rid of chars that kill mongo
             not token.startswith('http') and # get rid of urls
             not token.startswith('@') and # get rid of Replies
@@ -52,22 +52,21 @@ def token_counter(def_dict, tweet):
 
     temp_dict = {k:v for k,v in def_dict.iteritems()}
 
-    temp_tweet = {'_id': tweet.created_at,
+    temp_tweet = {'_id': tweet.created_at.replace(minute=0, second=0, microsecond=0),
                   'text': temp_dict}
 
-    return mongo_coll.save(temp_tweet)
-
+    return temp_tweet
 
 def insert_tweet(tweet):
-    already_exists = mongo_coll.find_one({'_id': tweet.created_at})
+    already_exists = mongo_coll.find_one({'_id': tweet.created_at.replace(minute=0, second=0, microsecond=0)})
 
-    if already_exists:
+    if already_exists is not None:
         temp_dict = defaultdict(int, already_exists['text'])
 
     else:
         temp_dict = defaultdict(int)
 
-    return token_counter(temp_dict, tweet)
+    return mongo_coll.save(token_counter(temp_dict, tweet))
 
 
 def main():
