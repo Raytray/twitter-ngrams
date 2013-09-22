@@ -14,7 +14,7 @@ def find(token=None):
         for item in mongo_coll.find({text_token: {'$exists': True}}):
             return_dict[item['_id']] = {'text': token,
                                        'percentage': (item['text'][token]/
-                                                      float(sum(item['text'].values()))*100)}
+                                                      float(sum(item['text'].values())))}
     else:
         for item in mongo_coll.find():
             return_dict[item['_id']] = {'text': sum(item['text'].values())}

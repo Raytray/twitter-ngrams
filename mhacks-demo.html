@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)http://127.0.0.1:8888/54009086-518a-4eee-a206-40a51d9a5988# -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <title>mhacks-demo</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://127.0.0.1:8888/static/base/images/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="./mhacks-demo_files/jquery-ui.min.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+
+
+<script type="text/javascript" src="./mhacks-demo_files/MathJax.js" charset="utf-8"></script><style type="text/css"></style>
+
+<script type="text/javascript">
+// MathJax disabled, set as null to distingish from *missing* MathJax,
+// where it will be undefined, and should prompt a dialog later.
+window.mathjax_url = "http://cdn.mathjax.org/mathjax/latest/MathJax.js";
+</script>
+
+<link rel="stylesheet" href="http://127.0.0.1:8888/static/components/codemirror/lib/codemirror.css">
+
+
+    
+	    
+	        <link rel="stylesheet" href="./mhacks-demo_files/style.min.css" type="text/css">
+	    
+    
+    
+
+<link rel="stylesheet" href="./mhacks-demo_files/override.css" type="text/css">
+
+
+    <link rel="stylesheet" href="./mhacks-demo_files/custom.css" type="text/css">
+    <script src="./mhacks-demo_files/require.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+      require.config({
+          baseUrl: '/static/',
+      });
+    </script>
+
+    
+    
+
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/marked/lib/marked" src="./mhacks-demo_files/marked.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">/* Local ID — mndocdiojkckhpnhpeminpalidafeink */
+/* Web Store ID — ihmgiclibbndffejedjimfjmfoabpcke */
+
+.TnITTtw-help-selected-wrap {
+  border: 1px solid #C7C6C2;
+  box-shadow: 0 0 10px rgba(43, 43, 43, 0.325);
+  border-radius: 4px;
+  width: 231px
+}
+
+  .TnITTtw-help-inside-layout {
+    height: 133px;
+    background: #F5F5F5;
+    border-radius: 3px
+  }
+
+    .TnITTtw-left-particle {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      box-shadow: inset 0 1px 0 white;
+      color: #4E4E4E;
+      text-shadow: 0 1px 0 white;
+      width: 194px;
+      display: inline-block;
+      border-right: 1px solid #D9D9D9
+    }
+
+      .TnITTtw-content-layout {
+        text-align: left;
+        margin: 10px 15px
+      }
+
+        .TnITTtw-variant-bunch-wrap {
+
+        }
+
+          .TnITTtw-variant-bunch-wrap .inside-layout {
+
+          }
+
+            .TnITTtw-main-variant-wrap {
+
+            }
+
+              .TnITTtw-main-variant {
+                font-weight: 700;
+                font-size: 15px;
+                text-shadow: 0 1px 0 rgba(255, 255, 255, 0.775);
+                display: inline-block;
+                vertical-align: top;
+                color: #2B2B2B
+              }
+
+            .TnITTtw-variants-by-pos {
+              
+            }
+
+              .TnITTtw-TnITTtw-variant-row {
+                text-shadow: 0 1px 0 rgba(255, 255, 255, 0.775)
+              }
+
+                .TnITTtw-v-pos {
+                  font-weight: 700;
+                  margin-top: 10px;
+                  font-size: 12px;
+                  color: #545454
+                }
+
+                  .TnITTtw-v-pos:first-child {
+                    margin-top: 8px
+                  }
+
+                .TnITTtw-v-closest-wrap {
+                  font-size: 13px;
+                  color: #4E4E4E
+                }
+
+                  .TnITTtw-v-item {
+                    display: inline-block
+                  }
+
+        .TnITTtw-listen-disabled {
+          opacity: 0.475;
+          cursor: default
+        }
+
+    .TnITTtw-right-particle {
+      background: rgba(255, 255, 255, 0.125);
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      display: inline-block;
+      width: 36px;
+      height: 133px;
+      vertical-align: top;
+      box-shadow: inset 1px 0 3px rgba(43, 43, 43, 0.05), inset 0 1px 0 #F5F5F5
+    }
+
+      .TnITTtw-sidebar {
+
+      }
+
+        .TnITTtw-sbutton {
+          position: absolute;
+          -webkit-user-select: none;
+          cursor: pointer
+        }
+
+        .TnITTtw-listen-button {
+          width: 16px;
+          height: 17px;
+          background: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/resources/images/sprites/sprite.png);
+          background-position: -54px 153px;
+          margin: 10px 0 0 10px
+        }
+
+          .TnITTtw-listen-button:active, .TnITTtw-listen-disabled {
+            background-position: -54px 136px
+          }
+
+/* ========== */
+/* Scrollbars */
+
+#TnITTtw-trVisibleLayout {
+  position: relative !important;
+  overflow: hidden;
+  height: 133px;
+  width: 100%
+}
+
+#TnITTtw-tr-scrollbar {
+  position: absolute;
+  display: block;
+  width: 9px; 
+  height: 135px; 
+  font-size: 1px
+}
+
+#TnITTtw-track { 
+  position: absolute;
+  left: 185px;
+  top: -134px;
+  width: 11px;
+  height: 129px;
+  background: transparent
+}
+
+#TnITTtw-dragBar {
+  position: absolute; 
+  left: 1px;
+  top: 1px;
+  width: 5px; 
+  height: 10px;
+  background: rgba(43, 43, 43, 0.475);
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 #FFF
+}
+
+  #TnITTtw-dragBar:hover, #TnITTtw-dragBar:active {
+    background: rgba(43, 43, 43, 0.775)
+  } 
+
+#TnITTtw-scrollbar, #TnITTtw-track, #TnITTtw-dragBar {
+  -webkit-user-select: none
+}
+
+.TnITTtw-arrow {
+  display: none;
+  width: 12px;
+  height: 6px;
+  background: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/resources/images/sprites/sprite.png);
+  position: relative
+}
+
+.TnITTtw-top-arrow {
+  background-position: -108px 148px;
+  bottom: -1px
+}
+
+.TnITTtw-bottom-arrow {
+  background-position: -108px 154px;
+  top: -1px
+}</style><style type="text/css">.MathJax_Display {text-align: center; margin: 0; position: relative; display: block; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; border: 0; padding: 0; margin: 0}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0 !important; padding: 0 !important; margin: 0 !important; vertical-align: 0 !important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap ! important}
+.MathJax img {display: inline ! important; float: none ! important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block; overflow: hidden; width: 1px; height: 60ex}
+.MathJax .MathJax_EmBox {display: block; overflow: hidden; width: 1px; height: 60em}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Main; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf') format('opentype'); font-weight: bold}
+@font-face {font-family: MathJax_Main; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Math; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Caligraphic; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">#TnITTtw-tooltip-wrap {
+  position: absolute;
+  z-index: 9999;
+  font-family: Tahoma;
+  font-size: 13px;
+  line-height: normal
+}
+
+  .TnITTtw-inside-layout {
+
+  }
+
+    .TnITTtw-content {
+      
+    }</style><style type="text/css">.help-tt-wrap {
+  background: rgba(0, 0, 0, 0.575);
+  color: #FFF;
+  padding: 10px;
+  border-radius: 3px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.775)
+}
+
+  .text-layout {
+
+  }
+
+    .text-container {
+
+    }
+
+.TnITTtw-arrow {
+  display: none;
+  width: 12px;
+  height: 6px;
+  background: url(../../../images/sprites/sprite.png);
+  position: relative
+}
+
+.TnITTtw-top-arrow {
+  background-position: -18px 86px;
+  bottom: -1px
+}
+
+.TnITTtw-bottom-arrow {
+  background-position: -18px 80px;
+  top: -1px
+}</style><style type="text/css">#TnITTtw-tooltip-wrap {
+  position: absolute;
+  z-index: 9999;
+  font-family: Tahoma;
+  font-size: 13px;
+  line-height: normal
+}
+
+  .TnITTtw-inside-layout {
+
+  }
+
+    .TnITTtw-content {
+      
+    }</style><style type="text/css"></style><style type="text/css"></style></head>
+
+<body data-project="/home/raytray/Development/twitter-ngrams" data-base-project-url="/" data-base-kernel-url="/" data-notebook-id="54009086-518a-4eee-a206-40a51d9a5988" class="notebook_app" style=""><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+
+<noscript>
+    &lt;div id='noscript'&gt;
+      IPython Notebook requires JavaScript.&lt;br&gt;
+      Please enable it to proceed.
+  &lt;/div&gt;
+</noscript>
+
+<div id="header" class="navbar navbar-static-top border-box-sizing" style="display: none;">
+  <div class="navbar-inner navbar-nobg">
+    <div class="container">
+    <div id="ipython_notebook" class="nav brand pull-left"><a href="http://127.0.0.1:8888/" alt="dashboard"><img src="./mhacks-demo_files/ipynblogo.png" alt="IPython Notebook"></a></div>
+
+    
+
+      <span id="login_widget">
+        
+      </span>
+
+    
+
+    
+
+<span id="save_widget" class="nav pull-left">
+    <span id="notebook_name" class="">mhacks-demo</span>
+    <span id="checkpoint_status">Last Checkpoint: Sep 22 07:58</span>
+    <span id="autosave_status">(autosaved)</span>
+</span>
+
+
+    </div>
+  </div>
+</div>
+
+<div id="site" class="border-box-sizing" style="display: block;">
+
+
+<div id="menubar-container" class="container">
+<div id="menubar" class="border-box-sizing">
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+    <ul id="menus" class="nav">
+        <li class="dropdown"><a href="./mhacks-demo_files/mhacks-demo.html" class="dropdown-toggle" data-toggle="dropdown">File</a>
+            <ul class="dropdown-menu">
+                <li id="new_notebook"><a href="./mhacks-demo_files/mhacks-demo.html">New</a></li>
+                <li id="open_notebook"><a href="./mhacks-demo_files/mhacks-demo.html">Open...</a></li>
+                <!-- <hr/> -->
+                <li class="divider"></li>
+                <li id="copy_notebook"><a href="./mhacks-demo_files/mhacks-demo.html">Make a Copy...</a></li>
+                <li id="rename_notebook"><a href="./mhacks-demo_files/mhacks-demo.html">Rename...</a></li>
+                <li id="save_checkpoint"><a href="./mhacks-demo_files/mhacks-demo.html">Save and Checkpoint</a></li>
+                <!-- <hr/> -->
+                <li class="divider"></li>
+                <li id="restore_checkpoint" class="dropdown-submenu"><a href="./mhacks-demo_files/mhacks-demo.html">Revert to Checkpoint</a>
+                  <ul class="dropdown-menu"><li><a href="./mhacks-demo_files/mhacks-demo.html">Sep 22 07:58:57</a></li></ul>
+                </li>
+                <li class="divider"></li>
+                <li class="dropdown-submenu"><a href="./mhacks-demo_files/mhacks-demo.html">Download as</a>
+                    <ul class="dropdown-menu">
+                        <li id="download_ipynb"><a href="./mhacks-demo_files/mhacks-demo.html">IPython (.ipynb)</a></li>
+                        <li id="download_py"><a href="./mhacks-demo_files/mhacks-demo.html">Python (.py)</a></li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                
+                <li id="kill_and_exit"><a href="./mhacks-demo_files/mhacks-demo.html">Close and halt</a></li>
+            </ul>
+        </li>
+        <li class="dropdown"><a href="./mhacks-demo_files/mhacks-demo.html" class="dropdown-toggle" data-toggle="dropdown">Edit</a>
+            <ul class="dropdown-menu">
+                <li id="cut_cell"><a href="./mhacks-demo_files/mhacks-demo.html">Cut Cell</a></li>
+                <li id="copy_cell"><a href="./mhacks-demo_files/mhacks-demo.html">Copy Cell</a></li>
+                <li id="paste_cell_above" class="disabled"><a href="./mhacks-demo_files/mhacks-demo.html">Paste Cell Above</a></li>
+                <li id="paste_cell_below" class="disabled"><a href="./mhacks-demo_files/mhacks-demo.html">Paste Cell Below</a></li>
+                <li id="paste_cell_replace" class="disabled"><a href="./mhacks-demo_files/mhacks-demo.html">Paste Cell &amp; Replace</a></li>
+                <li id="delete_cell"><a href="./mhacks-demo_files/mhacks-demo.html">Delete Cell</a></li>
+                <li id="undelete_cell" class=""><a href="./mhacks-demo_files/mhacks-demo.html">Undo Delete Cell</a></li>
+                <li class="divider"></li>
+                <li id="split_cell"><a href="./mhacks-demo_files/mhacks-demo.html">Split Cell</a></li>
+                <li id="merge_cell_above"><a href="./mhacks-demo_files/mhacks-demo.html">Merge Cell Above</a></li>
+                <li id="merge_cell_below"><a href="./mhacks-demo_files/mhacks-demo.html">Merge Cell Below</a></li>
+                <li class="divider"></li>
+                <li id="move_cell_up"><a href="./mhacks-demo_files/mhacks-demo.html">Move Cell Up</a></li>
+                <li id="move_cell_down"><a href="./mhacks-demo_files/mhacks-demo.html">Move Cell Down</a></li>
+                <li class="divider"></li>
+                <li id="select_previous"><a href="./mhacks-demo_files/mhacks-demo.html">Select Previous Cell</a></li>
+                <li id="select_next"><a href="./mhacks-demo_files/mhacks-demo.html">Select Next Cell</a></li>
+            </ul>
+        </li>
+        <li class="dropdown"><a href="./mhacks-demo_files/mhacks-demo.html" class="dropdown-toggle" data-toggle="dropdown">View</a>
+            <ul class="dropdown-menu">
+                <li id="toggle_header"><a href="./mhacks-demo_files/mhacks-demo.html">Toggle Header</a></li>
+                <li id="toggle_toolbar"><a href="./mhacks-demo_files/mhacks-demo.html">Toggle Toolbar</a></li>
+            </ul>
+        </li>
+        <li class="dropdown"><a href="./mhacks-demo_files/mhacks-demo.html" class="dropdown-toggle" data-toggle="dropdown">Insert</a>
+            <ul class="dropdown-menu">
+                <li id="insert_cell_above"><a href="./mhacks-demo_files/mhacks-demo.html">Insert Cell Above</a></li>
+                <li id="insert_cell_below"><a href="./mhacks-demo_files/mhacks-demo.html">Insert Cell Below</a></li>
+            </ul>
+        </li>
+        <li class="dropdown"><a href="./mhacks-demo_files/mhacks-demo.html" class="dropdown-toggle" data-toggle="dropdown">Cell</a>
+            <ul class="dropdown-menu">
+                <li id="run_cell"><a href="./mhacks-demo_files/mhacks-demo.html">Run</a></li>
+                <li id="run_cell_in_place"><a href="./mhacks-demo_files/mhacks-demo.html">Run in Place</a></li>
+                <li id="run_all_cells" title="Run all cells in the notebook"><a href="./mhacks-demo_files/mhacks-demo.html">Run All</a></li>
+                <li id="run_all_cells_above" title="Run all cells above (but not including) this cell"><a href="./mhacks-demo_files/mhacks-demo.html">Run All Above</a></li>
+                <li id="run_all_cells_below" title="Run this cell and all cells below it"><a href="./mhacks-demo_files/mhacks-demo.html">Run All Below</a></li>
+                <li class="divider"></li>
+                <li id="change_cell_type" class="dropdown-submenu"><a href="./mhacks-demo_files/mhacks-demo.html">Cell Type</a>
+                    <ul class="dropdown-menu">
+                      <li id="to_code"><a href="./mhacks-demo_files/mhacks-demo.html">Code</a></li>
+                      <li id="to_markdown"><a href="./mhacks-demo_files/mhacks-demo.html">Markdown </a></li>
+                      <li id="to_raw"><a href="./mhacks-demo_files/mhacks-demo.html">Raw Text</a></li>
+                      <li id="to_heading1"><a href="./mhacks-demo_files/mhacks-demo.html">Heading 1</a></li>
+                      <li id="to_heading2"><a href="./mhacks-demo_files/mhacks-demo.html">Heading 2</a></li>
+                      <li id="to_heading3"><a href="./mhacks-demo_files/mhacks-demo.html">Heading 3</a></li>
+                      <li id="to_heading4"><a href="./mhacks-demo_files/mhacks-demo.html">Heading 4</a></li>
+                      <li id="to_heading5"><a href="./mhacks-demo_files/mhacks-demo.html">Heading 5</a></li>
+                      <li id="to_heading6"><a href="./mhacks-demo_files/mhacks-demo.html">Heading 6</a></li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li id="toggle_output"><a href="./mhacks-demo_files/mhacks-demo.html">Toggle Current Output</a></li>
+                <li id="all_outputs" class="dropdown-submenu"><a href="./mhacks-demo_files/mhacks-demo.html">All Output</a>
+                    <ul class="dropdown-menu">
+                        <li id="expand_all_output"><a href="./mhacks-demo_files/mhacks-demo.html">Expand</a></li>
+                        <li id="scroll_all_output"><a href="./mhacks-demo_files/mhacks-demo.html">Scroll Long</a></li>
+                        <li id="collapse_all_output"><a href="./mhacks-demo_files/mhacks-demo.html">Collapse</a></li>
+                        <li id="clear_all_output"><a href="./mhacks-demo_files/mhacks-demo.html">Clear</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown"><a href="./mhacks-demo_files/mhacks-demo.html" class="dropdown-toggle" data-toggle="dropdown">Kernel</a>
+            <ul class="dropdown-menu">
+                <li id="int_kernel"><a href="./mhacks-demo_files/mhacks-demo.html">Interrupt</a></li>
+                <li id="restart_kernel"><a href="./mhacks-demo_files/mhacks-demo.html">Restart</a></li>
+            </ul>
+        </li>
+        <li class="dropdown"><a href="./mhacks-demo_files/mhacks-demo.html" class="dropdown-toggle" data-toggle="dropdown">Help</a>
+            <ul class="dropdown-menu">
+                <li><a href="http://ipython.org/documentation.html" target="_blank">IPython Help</a></li>
+                <li><a href="http://ipython.org/ipython-doc/stable/interactive/notebook.html" target="_blank">Notebook Help</a></li>
+                <li id="keyboard_shortcuts"><a href="./mhacks-demo_files/mhacks-demo.html">Keyboard Shortcuts</a></li>
+                <li class="divider"></li>
+                <li><a href="http://docs.python.org/" target="_blank">Python</a></li>
+                <li><a href="http://docs.scipy.org/doc/numpy/reference/" target="_blank">NumPy</a></li>
+                <li><a href="http://docs.scipy.org/doc/scipy/reference/" target="_blank">SciPy</a></li>
+                <li><a href="http://matplotlib.org/" target="_blank">Matplotlib</a></li>
+                <li><a href="http://docs.sympy.org/dev/index.html" target="_blank">SymPy</a></li>
+                <li><a href="http://pandas.pydata.org/pandas-docs/stable/" target="_blank">pandas</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div id="notification_area"><div id="notification_kernel" class="notification_widget pull-right border-box-sizing" style="display: none;"></div><div id="notification_notebook" class="notification_widget pull-right border-box-sizing" style="display: none;"></div></div>
+    </div>
+  </div>
+</div>
+</div>
+<div id="maintoolbar" class="navbar" style="display: block;">
+  <div class="toolbar-inner navbar-inner navbar-nobg">
+    <div id="maintoolbar-container" class="container border-box-sizing toolbar"><div class="btn-group"><button class="btn" title="Save and Checkpoint" id="save_b"><i class="icon-save"></i></button></div><div class="btn-group" id="cut_copy_paste"><button class="btn" title="Cut Cell" id="cut_b"><i class="icon-cut"></i></button><button class="btn" title="Copy Cell" id="copy_b"><i class="icon-copy"></i></button><button class="btn" title="Paste Cell Below" id="paste_b"><i class="icon-paste"></i></button></div><div class="btn-group" id="move_up_down"><button class="btn" title="Move Cell Up" id="move_up_b"><i class="icon-arrow-up"></i></button><button class="btn" title="Move Cell Down" id="move_down_b"><i class="icon-arrow-down"></i></button></div><div class="btn-group" id="insert_above_below"><button class="btn" title="Insert Cell Above" id="insert_above_b"><i class="icon-circle-arrow-up"></i></button><button class="btn" title="Insert Cell Below" id="insert_below_b"><i class="icon-circle-arrow-down"></i></button></div><div class="btn-group" id="run_int"><button class="btn" title="Run Cell" id="run_b"><i class="icon-play"></i></button><button class="btn" title="Interrupt" id="interrupt_b"><i class="icon-stop"></i></button></div><select id="cell_type"><option value="code">Code</option><option value="markdown">Markdown</option><option value="raw">Raw Text</option><option value="heading1">Heading 1</option><option value="heading2">Heading 2</option><option value="heading3">Heading 3</option><option value="heading4">Heading 4</option><option value="heading5">Heading 5</option><option value="heading6">Heading 6</option></select><span class="navbar-text">Cell Toolbar:</span><select id="ctb_select"><option value="">None</option><option value="Default">Default</option><option value="Slideshow">Slideshow</option></select></div>
+  </div>
+</div>
+</div>
+
+<div id="ipython-main-app" class="border-box-sizing" style="height: 569px;">
+
+    <div id="notebook_panel" class="border-box-sizing">
+        <div id="notebook" class="border-box-sizing" style="height: 561px;"><div class="container" id="notebook-container"><div class="cell border-box-sizing code_cell selected" tabindex="2"><div class="input"><div class="prompt input_prompt">In&nbsp;[50]:</div><div class="vbox box-flex1"><div class="ctb_hideshow"><div class="celltoolbar hbox reverse"></div></div><div class="input_area"><div class="CodeMirror cm-s-ipython"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 5.71875px; left: 5.71875px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none; font-size: 4px;"></textarea></div><div class="CodeMirror-hscrollbar" style="left: 0px;"><div style="height: 1px;"></div></div><div class="CodeMirror-vscrollbar"><div style="width: 1px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-gutter-filler"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="min-width: 285px; margin-left: 0px; min-height: 198px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span class="cm-keyword">i</span><span class="cm-keyword">m</span><span class="cm-keyword">p</span><span class="cm-keyword">o</span><span class="cm-keyword">r</span><span class="cm-keyword">t</span><span> </span><span class="cm-variable">v</span><span class="cm-variable">i</span><span class="cm-variable">n</span><span class="cm-variable">c</span><span class="cm-variable">e</span><span class="cm-variable">n</span><span class="cm-variable">t</span></pre></div><div style="position: relative; z-index: 1; display: none;"></div><div class="CodeMirror-code" style=""><pre><span class="cm-keyword">import</span> <span class="cm-variable">vincent</span></pre><pre><span class="cm-keyword">import</span> <span class="cm-variable">pandas</span></pre><pre><span class="cm-keyword">import</span> <span class="cm-variable">numpy</span></pre><pre><span class="cm-keyword">import</span> <span class="cm-variable">pprint</span></pre><pre><span class="cm-keyword">import</span> <span class="cm-variable">datetime</span></pre><pre>&nbsp;</pre><pre><span class="cm-keyword">from</span> <span class="cm-variable">mongo_query</span> <span class="cm-keyword">import</span> <span class="cm-variable">find</span></pre><pre>&nbsp;</pre><pre><span class="cm-keyword">from</span> <span class="cm-variable">vincent</span> <span class="cm-keyword">import</span> <span class="cm-variable">ipynb</span></pre><pre><span class="cm-variable">ipynb</span>.<span class="cm-variable">init_d3</span>()</pre><pre><span class="cm-variable">ipynb</span>.<span class="cm-variable">init_vg</span>()</pre></div><div class="CodeMirror-cursor" style="left: 0px; top: 0px; height: 17px;">&nbsp;</div><div class="CodeMirror-cursor CodeMirror-secondarycursor" style="display: none;">&nbsp;</div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; top: 198px;"></div><div class="CodeMirror-gutters" style="display: none; height: 198px;"></div></div></div></div></div></div><div class="output_wrapper"><div class="out_prompt_overlay prompt" title="click to scroll output; double click to hide" style=""></div><div class="output vbox" style=""><div class="output_area"><div class="prompt"></div><div class="output_subarea output_html rendered_html"><script src="./mhacks-demo_files/d3.v3.min.js"></script></div></div><div class="output_area"><div class="prompt"></div><div class="output_subarea output_html rendered_html"><script src="./mhacks-demo_files/vega.js"></script></div></div></div><div class="btn output_collapsed" title="click to expand output" style="display: none;">. . .</div></div></div><div class="cell border-box-sizing code_cell" tabindex="2"><div class="input"><div class="prompt input_prompt">In&nbsp;[51]:</div><div class="vbox box-flex1"><div class="ctb_hideshow"><div class="celltoolbar hbox reverse"></div></div><div class="input_area"><div class="CodeMirror cm-s-ipython"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 5.71875px; left: 5.71875px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none; font-size: 4px;"></textarea></div><div class="CodeMirror-hscrollbar" style="left: 0px;"><div style="height: 1px;"></div></div><div class="CodeMirror-vscrollbar"><div style="width: 1px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-gutter-filler"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="min-width: 789px; margin-left: 0px; min-height: 113px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span class="cm-comment">#</span><span class="cm-comment"> </span><span class="cm-comment">N</span><span class="cm-comment">u</span><span class="cm-comment">m</span><span class="cm-comment">b</span><span class="cm-comment">e</span><span class="cm-comment">r</span><span class="cm-comment"> </span><span class="cm-comment">o</span><span class="cm-comment">f</span><span class="cm-comment"> </span><span class="cm-comment">t</span><span class="cm-comment">o</span><span class="cm-comment">k</span><span class="cm-comment">e</span><span class="cm-comment">n</span><span class="cm-comment">s</span><span class="cm-comment"> </span><span class="cm-comment">i</span><span class="cm-comment">n</span><span class="cm-comment"> </span><span class="cm-comment">t</span><span class="cm-comment">w</span><span class="cm-comment">e</span><span class="cm-comment">e</span><span class="cm-comment">t</span><span class="cm-comment">s</span><span class="cm-comment"> </span><span class="cm-comment">c</span><span class="cm-comment">o</span><span class="cm-comment">n</span><span class="cm-comment">t</span><span class="cm-comment">a</span><span class="cm-comment">i</span><span class="cm-comment">n</span><span class="cm-comment">i</span><span class="cm-comment">n</span><span class="cm-comment">g</span><span class="cm-comment"> </span><span class="cm-comment">t</span><span class="cm-comment">h</span><span class="cm-comment">e</span><span class="cm-comment"> </span><span class="cm-comment">w</span><span class="cm-comment">o</span><span class="cm-comment">r</span><span class="cm-comment">d</span><span class="cm-comment"> </span><span class="cm-comment">"</span><span class="cm-comment">m</span><span class="cm-comment">h</span><span class="cm-comment">a</span><span class="cm-comment">c</span><span class="cm-comment">k</span><span class="cm-comment">s</span><span class="cm-comment">"</span><span class="cm-comment"> </span><span class="cm-comment">s</span><span class="cm-comment">i</span><span class="cm-comment">n</span><span class="cm-comment">c</span><span class="cm-comment">e</span><span class="cm-comment"> </span><span class="cm-comment">7</span><span class="cm-comment">a</span><span class="cm-comment">m</span><span class="cm-comment"> </span><span class="cm-comment">S</span><span class="cm-comment">a</span><span class="cm-comment">t</span><span class="cm-comment">u</span><span class="cm-comment">r</span><span class="cm-comment">d</span><span class="cm-comment">a</span><span class="cm-comment">y</span><span class="cm-comment"> </span><span class="cm-comment">M</span><span class="cm-comment">o</span><span class="cm-comment">r</span><span class="cm-comment">n</span><span class="cm-comment">i</span><span class="cm-comment">n</span><span class="cm-comment">g</span></pre></div><div style="position: relative; z-index: 1; display: none;"></div><div class="CodeMirror-code" style=""><pre><span class="cm-comment"># Number of tokens in tweets containing the word "mhacks" since 7am Saturday Morning</span></pre><pre><span class="cm-variable">my_data</span> = <span class="cm-variable">find</span>()</pre><pre><span class="cm-variable">my_series</span> = <span class="cm-variable">pandas</span>.<span class="cm-variable">Series</span>([<span class="cm-variable">count</span>[<span class="cm-string">'text'</span>] <span class="cm-keyword">for</span> <span class="cm-variable">count</span> <span class="cm-operator">in</span> <span class="cm-variable">my_data</span>.<span class="cm-variable">values</span>()],</pre><pre>                          <span class="cm-variable">index</span>=[<span class="cm-variable">time</span> <span class="cm-operator">-</span> <span class="cm-variable">datetime</span>.<span class="cm-variable">timedelta</span>(<span class="cm-variable">hours</span>=<span class="cm-number">4</span>) <span class="cm-keyword">for</span> </pre><pre>                                 <span class="cm-variable">time</span> <span class="cm-operator">in</span> <span class="cm-variable">my_data</span>.<span class="cm-variable">keys</span>()])</pre><pre><span class="cm-keyword">print</span> <span class="cm-variable">my_series</span></pre></div><div class="CodeMirror-cursor" style="left: 0px; top: 0px; height: 17px;">&nbsp;</div><div class="CodeMirror-cursor CodeMirror-secondarycursor" style="display: none;">&nbsp;</div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; top: 113px;"></div><div class="CodeMirror-gutters" style="display: none; height: 113px;"></div></div></div></div></div></div><div class="output_wrapper"><div class="out_prompt_overlay prompt" title="click to scroll output; double click to hide" style=""></div><div class="output vbox" style=""><div class="output_area"><div class="prompt"></div><div class="output_subarea output_text output_stream output_stdout"><pre>2013-09-21 07:00:00    239
+2013-09-21 08:00:00    348
+2013-09-21 09:00:00    878
+2013-09-21 10:00:00    816
+2013-09-21 11:00:00    664
+2013-09-21 12:00:00    911
+2013-09-21 13:00:00    835
+2013-09-21 14:00:00    828
+2013-09-21 15:00:00    645
+2013-09-21 16:00:00    577
+2013-09-21 17:00:00    861
+2013-09-21 18:00:00    568
+2013-09-21 19:00:00    224
+2013-09-21 20:00:00    537
+2013-09-21 21:00:00    673
+2013-09-21 22:00:00    578
+2013-09-21 23:00:00    535
+2013-09-22 00:00:00    441
+2013-09-22 01:00:00    538
+2013-09-22 02:00:00    456
+2013-09-22 03:00:00    336
+2013-09-22 04:00:00    167
+2013-09-22 05:00:00    198
+2013-09-22 06:00:00    196
+2013-09-22 07:00:00    191
+dtype: int64
+</pre></div></div></div><div class="btn output_collapsed" title="click to expand output" style="display: none;">. . .</div></div></div><div class="cell border-box-sizing code_cell" tabindex="2"><div class="input"><div class="prompt input_prompt">In&nbsp;[52]:</div><div class="vbox box-flex1"><div class="ctb_hideshow"><div class="celltoolbar hbox reverse"></div></div><div class="input_area"><div class="CodeMirror cm-s-ipython"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 5.71875px; left: 5.71875px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none; font-size: 4px;"></textarea></div><div class="CodeMirror-hscrollbar" style="left: 0px;"><div style="height: 1px;"></div></div><div class="CodeMirror-vscrollbar"><div style="width: 1px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-gutter-filler"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="min-width: 789px; margin-left: 0px; min-height: 79px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span class="cm-comment">#</span><span class="cm-comment"> </span><span class="cm-comment">N</span><span class="cm-comment">u</span><span class="cm-comment">m</span><span class="cm-comment">b</span><span class="cm-comment">e</span><span class="cm-comment">r</span><span class="cm-comment"> </span><span class="cm-comment">o</span><span class="cm-comment">f</span><span class="cm-comment"> </span><span class="cm-comment">t</span><span class="cm-comment">o</span><span class="cm-comment">k</span><span class="cm-comment">e</span><span class="cm-comment">n</span><span class="cm-comment">s</span><span class="cm-comment"> </span><span class="cm-comment">i</span><span class="cm-comment">n</span><span class="cm-comment"> </span><span class="cm-comment">t</span><span class="cm-comment">w</span><span class="cm-comment">e</span><span class="cm-comment">e</span><span class="cm-comment">t</span><span class="cm-comment">s</span><span class="cm-comment"> </span><span class="cm-comment">c</span><span class="cm-comment">o</span><span class="cm-comment">n</span><span class="cm-comment">t</span><span class="cm-comment">a</span><span class="cm-comment">i</span><span class="cm-comment">n</span><span class="cm-comment">i</span><span class="cm-comment">n</span><span class="cm-comment">g</span><span class="cm-comment"> </span><span class="cm-comment">t</span><span class="cm-comment">h</span><span class="cm-comment">e</span><span class="cm-comment"> </span><span class="cm-comment">w</span><span class="cm-comment">o</span><span class="cm-comment">r</span><span class="cm-comment">d</span><span class="cm-comment"> </span><span class="cm-comment">"</span><span class="cm-comment">m</span><span class="cm-comment">h</span><span class="cm-comment">a</span><span class="cm-comment">c</span><span class="cm-comment">k</span><span class="cm-comment">s</span><span class="cm-comment">"</span><span class="cm-comment"> </span><span class="cm-comment">s</span><span class="cm-comment">i</span><span class="cm-comment">n</span><span class="cm-comment">c</span><span class="cm-comment">e</span><span class="cm-comment"> </span><span class="cm-comment">7</span><span class="cm-comment">a</span><span class="cm-comment">m</span><span class="cm-comment"> </span><span class="cm-comment">S</span><span class="cm-comment">a</span><span class="cm-comment">t</span><span class="cm-comment">u</span><span class="cm-comment">r</span><span class="cm-comment">d</span><span class="cm-comment">a</span><span class="cm-comment">y</span><span class="cm-comment"> </span><span class="cm-comment">M</span><span class="cm-comment">o</span><span class="cm-comment">r</span><span class="cm-comment">n</span><span class="cm-comment">i</span><span class="cm-comment">n</span><span class="cm-comment">g</span></pre></div><div style="position: relative; z-index: 1; display: none;"></div><div class="CodeMirror-code" style=""><pre><span class="cm-comment"># Number of tokens in tweets containing the word "mhacks" since 7am Saturday Morning</span></pre><pre><span class="cm-variable">line</span> = <span class="cm-variable">vincent</span>.<span class="cm-variable">Line</span>(<span class="cm-variable">my_series</span>)</pre><pre><span class="cm-variable">line</span>.<span class="cm-variable">axis_titles</span>(<span class="cm-variable">x</span>=<span class="cm-string">'Hour'</span>, <span class="cm-variable">y</span>=<span class="cm-string">'Tokens'</span>)</pre><pre><span class="cm-variable">line</span>.<span class="cm-variable">display</span>()</pre></div><div class="CodeMirror-cursor" style="left: 0px; top: 0px; height: 17px;">&nbsp;</div><div class="CodeMirror-cursor CodeMirror-secondarycursor" style="display: none;">&nbsp;</div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; top: 79px;"></div><div class="CodeMirror-gutters" style="display: none; height: 79px;"></div></div></div></div></div></div><div class="output_wrapper"><div class="out_prompt_overlay prompt" title="click to scroll output; double click to hide" style=""></div><div class="output vbox" style=""><div class="output_area"><div class="prompt"></div><div class="output_subarea output_html rendered_html"><div id="vis49523"><div class="vega" style="position: relative;"><canvas class="marks" width="650" height="360"></canvas></div></div></div></div><div class="output_area" style="display: none;"><div class="prompt"></div><div class="output_subarea"></div></div></div><div class="btn output_collapsed" title="click to expand output" style="display: none;">. . .</div></div></div><div class="cell border-box-sizing code_cell" tabindex="2"><div class="input"><div class="prompt input_prompt">In&nbsp;[53]:</div><div class="vbox box-flex1"><div class="ctb_hideshow"><div class="celltoolbar hbox reverse"></div></div><div class="input_area"><div class="CodeMirror cm-s-ipython"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 39.71875px; left: 248.71875px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none; font-size: 4px;"></textarea></div><div class="CodeMirror-hscrollbar" style="left: 0px;"><div style="height: 1px;"></div></div><div class="CodeMirror-vscrollbar"><div style="width: 1px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-gutter-filler"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="min-width: 861px; margin-left: 0px; min-height: 215px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span class="cm-variable">m</span><span class="cm-variable">y</span><span class="cm-variable">_</span><span class="cm-variable">d</span><span class="cm-variable">a</span><span class="cm-variable">t</span><span class="cm-variable">a</span><span class="cm-variable">2</span><span> </span><span>=</span><span> </span><span class="cm-variable">f</span><span class="cm-variable">i</span><span class="cm-variable">n</span><span class="cm-variable">d</span><span>(</span><span class="cm-variable">t</span><span class="cm-variable">o</span><span class="cm-variable">k</span><span class="cm-variable">e</span><span class="cm-variable">n</span><span>=</span><span class="cm-string">"</span><span class="cm-string">h</span><span class="cm-string">a</span><span class="cm-string">c</span><span class="cm-string">k</span><span class="cm-string">"</span><span>)</span></pre></div><div style="position: relative; z-index: 1; display: none;"><div class="CodeMirror-selected" style="position: absolute; left: 207px; top: 34px; width: 63px; height: 17px;"></div></div><div class="CodeMirror-code" style=""><pre><span class="cm-comment"># Number of tokens in tweets containing the word "hack" vs "food" since 7am Saturday Morning</span></pre><pre><span class="cm-variable">my_data</span> = <span class="cm-variable">find</span>(<span class="cm-variable">token</span>=<span class="cm-string">"internet"</span>)</pre><pre><span class="cm-variable">my_data2</span> = <span class="cm-variable">find</span>(<span class="cm-variable">token</span>=<span class="cm-string">"hack"</span>)</pre><pre><span class="cm-variable">my_series</span> = <span class="cm-variable">pandas</span>.<span class="cm-variable">Series</span>([<span class="cm-variable">count</span>[<span class="cm-string">'percentage'</span>] <span class="cm-keyword">for</span> <span class="cm-variable">count</span> <span class="cm-operator">in</span> <span class="cm-variable">my_data</span>.<span class="cm-variable">values</span>()],</pre><pre>                          <span class="cm-variable">index</span>=[<span class="cm-variable">time</span> <span class="cm-operator">-</span> <span class="cm-variable">datetime</span>.<span class="cm-variable">timedelta</span>(<span class="cm-variable">hours</span>=<span class="cm-number">4</span>) <span class="cm-keyword">for</span> </pre><pre>                                 <span class="cm-variable">time</span> <span class="cm-operator">in</span> <span class="cm-variable">my_data</span>.<span class="cm-variable">keys</span>()])</pre><pre><span class="cm-variable">my_series2</span> = <span class="cm-variable">pandas</span>.<span class="cm-variable">Series</span>([<span class="cm-variable">count</span>[<span class="cm-string">'percentage'</span>] <span class="cm-keyword">for</span> <span class="cm-variable">count</span> <span class="cm-operator">in</span> <span class="cm-variable">my_data2</span>.<span class="cm-variable">values</span>()],</pre><pre>                          <span class="cm-variable">index</span>=[<span class="cm-variable">time</span> <span class="cm-operator">-</span> <span class="cm-variable">datetime</span>.<span class="cm-variable">timedelta</span>(<span class="cm-variable">hours</span>=<span class="cm-number">4</span>) <span class="cm-keyword">for</span> </pre><pre>                                 <span class="cm-variable">time</span> <span class="cm-operator">in</span> <span class="cm-variable">my_data2</span>.<span class="cm-variable">keys</span>()])</pre><pre><span class="cm-keyword">print</span> <span class="cm-variable">my_series</span></pre><pre><span class="cm-keyword">print</span> <span class="cm-variable">my_series2</span></pre><pre><span class="cm-comment"># Here we have discrete data sets so we need to fill in hours...</span></pre></div><div class="CodeMirror-cursor" style="left: 243px; top: 34px; height: 17px;">&nbsp;</div><div class="CodeMirror-cursor CodeMirror-secondarycursor" style="display: none;">&nbsp;</div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; top: 215px;"></div><div class="CodeMirror-gutters" style="display: none; height: 215px;"></div></div></div></div></div></div><div class="output_wrapper"><div class="out_prompt_overlay prompt" title="click to scroll output; double click to hide" style=""></div><div class="output vbox" style=""><div class="output_area"><div class="prompt"></div><div class="output_subarea output_text output_stream output_stdout"><pre>2013-09-21 07:00:00    0.004184
+2013-09-21 08:00:00    0.005747
+2013-09-21 09:00:00    0.005695
+2013-09-21 10:00:00    0.009804
+2013-09-22 05:00:00    0.005051
+2013-09-22 07:00:00    0.005236
+dtype: float64
+2013-09-21 09:00:00    0.001139
+2013-09-21 10:00:00    0.003676
+2013-09-21 12:00:00    0.001098
+2013-09-21 13:00:00    0.002395
+2013-09-21 15:00:00    0.004651
+2013-09-21 16:00:00    0.005199
+2013-09-21 21:00:00    0.001486
+2013-09-21 23:00:00    0.005607
+2013-09-22 00:00:00    0.004535
+2013-09-22 02:00:00    0.002193
+2013-09-22 05:00:00    0.005051
+dtype: float64
+</pre></div></div></div><div class="btn output_collapsed" title="click to expand output" style="display: none;">. . .</div></div></div><div class="cell border-box-sizing code_cell" tabindex="2"><div class="input"><div class="prompt input_prompt">In&nbsp;[54]:</div><div class="vbox box-flex1"><div class="ctb_hideshow"><div class="celltoolbar hbox reverse"></div></div><div class="input_area"><div class="CodeMirror cm-s-ipython"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 260.71875px; left: 644.71875px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none; font-size: 4px;"></textarea></div><div class="CodeMirror-hscrollbar" style="left: 0px;"><div style="height: 1px;"></div></div><div class="CodeMirror-vscrollbar"><div style="width: 1px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-gutter-filler"></div><div class="CodeMirror-scroll" tabindex="-1" draggable="false"><div class="CodeMirror-sizer" style="min-width: 861px; margin-left: 0px; min-height: 334px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span> </span><span> </span><span> </span><span> </span><span> </span><span> </span><span> </span><span> </span><span class="cm-variable">l</span><span class="cm-variable">i</span><span class="cm-variable">n</span><span class="cm-variable">e</span><span class="cm-variable">s</span><span class="cm-variable">_</span><span class="cm-variable">s</span><span class="cm-variable">e</span><span class="cm-variable">r</span><span class="cm-variable">i</span><span class="cm-variable">e</span><span class="cm-variable">s</span><span>[</span><span class="cm-variable">c</span><span class="cm-variable">a</span><span class="cm-variable">t</span><span class="cm-variable">e</span><span class="cm-variable">g</span><span class="cm-variable">o</span><span class="cm-variable">r</span><span class="cm-variable">y</span><span>]</span><span>.</span><span class="cm-variable">a</span><span class="cm-variable">p</span><span class="cm-variable">p</span><span class="cm-variable">e</span><span class="cm-variable">n</span><span class="cm-variable">d</span><span>(</span><span class="cm-variable">d</span><span class="cm-variable">a</span><span class="cm-variable">t</span><span class="cm-variable">a</span><span class="cm-variable">_</span><span class="cm-variable">s</span><span class="cm-variable">e</span><span class="cm-variable">r</span><span class="cm-variable">i</span><span class="cm-variable">e</span><span class="cm-variable">s</span><span>[</span><span class="cm-variable">c</span><span class="cm-variable">a</span><span class="cm-variable">t</span><span class="cm-variable">e</span><span class="cm-variable">g</span><span class="cm-variable">o</span><span class="cm-variable">r</span><span class="cm-variable">y</span><span>]</span><span>.</span><span class="cm-variable">g</span><span class="cm-variable">e</span><span class="cm-variable">t</span><span>(</span><span class="cm-variable">h</span><span class="cm-variable">o</span><span class="cm-variable">u</span><span class="cm-variable">r</span><span>,</span><span> </span><span class="cm-number">0</span><span>)</span><span>)</span></pre></div><div style="position: relative; z-index: 1; display: none;"><div class="CodeMirror-selected" style="position: absolute; left: 225px; top: 238px; width: 825px; height: 17px;"></div><div class="CodeMirror-selected" style="position: absolute; left: 0px; top: 255px; width: 639px; height: 17px;"></div></div><div class="CodeMirror-code" style=""><pre><span class="cm-comment"># Number of tokens in tweets containing the word "hack" vs "food" since 7am Saturday Morning</span></pre><pre><span class="cm-variable">my_index</span> = <span class="cm-variable">my_data</span>.<span class="cm-variable">keys</span>()</pre><pre><span class="cm-variable">my_index</span>.<span class="cm-variable">extend</span>(<span class="cm-variable">my_data2</span>.<span class="cm-variable">keys</span>())</pre><pre><span class="cm-variable">my_index</span> = [<span class="cm-variable">time</span> <span class="cm-operator">-</span> <span class="cm-variable">datetime</span>.<span class="cm-variable">timedelta</span>(<span class="cm-variable">hours</span>=<span class="cm-number">4</span>) <span class="cm-keyword">for</span> </pre><pre>                                 <span class="cm-variable">time</span> <span class="cm-operator">in</span> <span class="cm-variable">my_index</span>]</pre><pre><span class="cm-variable">my_index</span> = <span class="cm-builtin">sorted</span>(<span class="cm-builtin">list</span>(<span class="cm-builtin">set</span>(<span class="cm-variable">my_index</span>)))</pre><pre>&nbsp;</pre><pre><span class="cm-variable">data_series</span> = {<span class="cm-string">'internet'</span>: <span class="cm-variable">my_series</span>,</pre><pre>               <span class="cm-string">'hack'</span>: <span class="cm-variable">my_series2</span>}</pre><pre>&nbsp;</pre><pre><span class="cm-variable">lines_series</span> = {<span class="cm-string">'index'</span>: <span class="cm-variable">my_index</span>}</pre><pre>&nbsp;</pre><pre><span class="cm-keyword">for</span> <span class="cm-variable">category</span> <span class="cm-operator">in</span> <span class="cm-variable">data_series</span>.<span class="cm-variable">keys</span>():</pre><pre>    <span class="cm-variable">lines_series</span>[<span class="cm-variable">category</span>] = []</pre><pre>    <span class="cm-keyword">for</span> <span class="cm-variable">hour</span> <span class="cm-operator">in</span> <span class="cm-variable">my_index</span>:</pre><pre>        <span class="cm-variable">lines_series</span>[<span class="cm-variable">category</span>].<span class="cm-variable">append</span>(<span class="cm-variable">data_series</span>[<span class="cm-variable">category</span>].<span class="cm-variable">get</span>(<span class="cm-variable">hour</span>, <span class="cm-number">0</span>))</pre><pre><span class="cm-variable">lines_series</span>[<span class="cm-string">'index'</span>] = <span class="cm-variable">my_index</span></pre><pre><span class="cm-variable">pprint</span>.<span class="cm-variable">pprint</span>(<span class="cm-variable">lines_series</span>)</pre><pre><span class="cm-comment"># We did it the hard way, I'm sure Pandas has a way...</span></pre></div><div class="CodeMirror-cursor" style="left: 639px; top: 255px; height: 17px;">&nbsp;</div><div class="CodeMirror-cursor CodeMirror-secondarycursor" style="display: none;">&nbsp;</div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; top: 334px;"></div><div class="CodeMirror-gutters" style="display: none; height: 334px;"></div></div></div></div></div></div><div class="output_wrapper"><div class="out_prompt_overlay prompt" title="click to scroll output; double click to hide" style=""></div><div class="output vbox" style=""><div class="output_area"><div class="prompt"></div><div class="output_subarea output_text output_stream output_stdout"><pre>{'hack': [0,
+          0,
+          0.0011389521640091116,
+          0.0036764705882352941,
+          0.0010976948408342481,
+          0.0023952095808383233,
+          0.0046511627906976744,
+          0.0051993067590987872,
+          0.0014858841010401188,
+          0.0056074766355140183,
+          0.0045351473922902496,
+          0.0021929824561403508,
+          0.0050505050505050509,
+          0],
+ 'index': [datetime.datetime(2013, 9, 21, 7, 0),
+           datetime.datetime(2013, 9, 21, 8, 0),
+           datetime.datetime(2013, 9, 21, 9, 0),
+           datetime.datetime(2013, 9, 21, 10, 0),
+           datetime.datetime(2013, 9, 21, 12, 0),
+           datetime.datetime(2013, 9, 21, 13, 0),
+           datetime.datetime(2013, 9, 21, 15, 0),
+           datetime.datetime(2013, 9, 21, 16, 0),
+           datetime.datetime(2013, 9, 21, 21, 0),
+           datetime.datetime(2013, 9, 21, 23, 0),
+           datetime.datetime(2013, 9, 22, 0, 0),
+           datetime.datetime(2013, 9, 22, 2, 0),
+           datetime.datetime(2013, 9, 22, 5, 0),
+           datetime.datetime(2013, 9, 22, 7, 0)],
+ 'internet': [0.0041841004184100415,
+              0.0057471264367816091,
+              0.0056947608200455585,
+              0.0098039215686274508,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0.0050505050505050509,
+              0.005235602094240838]}
+</pre></div></div></div><div class="btn output_collapsed" title="click to expand output" style="display: none;">. . .</div></div></div><div class="cell border-box-sizing code_cell" tabindex="2"><div class="input"><div class="prompt input_prompt">In&nbsp;[55]:</div><div class="vbox box-flex1"><div class="ctb_hideshow"><div class="celltoolbar hbox reverse"></div></div><div class="input_area"><div class="CodeMirror cm-s-ipython"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 141.71875px; left: 131.71875px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none; font-size: 4px;"></textarea></div><div class="CodeMirror-hscrollbar" style="left: 0px;"><div style="height: 1px;"></div></div><div class="CodeMirror-vscrollbar"><div style="width: 1px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-gutter-filler"></div><div class="CodeMirror-scroll" tabindex="-1" draggable="false"><div class="CodeMirror-sizer" style="min-width: 861px; margin-left: 0px; min-height: 198px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span class="cm-variable">l</span><span class="cm-variable">i</span><span class="cm-variable">n</span><span class="cm-variable">e</span><span>.</span><span class="cm-variable">d</span><span class="cm-variable">i</span><span class="cm-variable">s</span><span class="cm-variable">p</span><span class="cm-variable">l</span><span class="cm-variable">a</span><span class="cm-variable">y</span><span>(</span><span>)</span></pre></div><div style="position: relative; z-index: 1; display: none;"><div class="CodeMirror-selected" style="position: absolute; left: 0px; top: 0px; width: 1050px; height: 17px;"></div><div class="CodeMirror-selected" style="position: absolute; left: 0px; top: 170px; width: 828px; height: 17px;"></div><div class="CodeMirror-selected" style="position: absolute; left: 0px; top: 17px; width: 1050px; height: 153px;"></div></div><div class="CodeMirror-code" style=""><pre><span class="cm-comment"># Number of tokens in tweets containing the word "hack" vs "food" since 7am Saturday Morning</span></pre><pre>&nbsp;</pre><pre><span class="cm-variable">data_array</span> = <span class="cm-variable">numpy</span>.<span class="cm-variable">array</span>([<span class="cm-variable">lines_series</span>[<span class="cm-string">'hack'</span>], <span class="cm-variable">lines_series</span>[<span class="cm-string">'internet'</span>]])</pre><pre><span class="cm-variable">data_array</span> = <span class="cm-variable">data_array</span>.<span class="cm-variable">transpose</span>()</pre><pre><span class="cm-variable">df</span> = <span class="cm-variable">pandas</span>.<span class="cm-variable">DataFrame</span>(<span class="cm-variable">data_array</span>, <span class="cm-variable">index</span>=<span class="cm-variable">lines_series</span>[<span class="cm-string">'index'</span>], <span class="cm-variable">columns</span>=<span class="cm-variable">data_series</span>.<span class="cm-variable">keys</span>())</pre><pre><span class="cm-variable">line</span> = <span class="cm-variable">vincent</span>.<span class="cm-variable">Line</span>(<span class="cm-variable">df</span>)</pre><pre><span class="cm-variable">line</span>.<span class="cm-variable">axis_titles</span>(<span class="cm-variable">x</span>=<span class="cm-string">'Hour'</span>, <span class="cm-variable">y</span>=<span class="cm-string">'Tokens/total tokens (in that hour)'</span>)</pre><pre><span class="cm-variable">line</span>.<span class="cm-variable">legend</span>(<span class="cm-variable">title</span>=<span class="cm-string">'Keywords'</span>)</pre><pre><span class="cm-variable">line</span>.<span class="cm-variable">display</span>()</pre><pre>&nbsp;</pre><pre><span class="cm-comment"># Cool! So it seems that the internet problem was pretty bad at 10 AM but all fixed by 12PM.</span></pre></div><div class="CodeMirror-cursor" style="left: 126px; top: 136px; height: 17px;">&nbsp;</div><div class="CodeMirror-cursor CodeMirror-secondarycursor" style="display: none;">&nbsp;</div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; top: 198px;"></div><div class="CodeMirror-gutters" style="display: none; height: 198px;"></div></div></div></div></div></div><div class="output_wrapper"><div class="out_prompt_overlay prompt" title="click to scroll output; double click to hide" style=""></div><div class="output vbox" style=""><div class="output_area"><div class="prompt"></div><div class="output_subarea output_html rendered_html"><div id="vis28847"><div class="vega" style="position: relative;"><canvas class="marks" width="650" height="360"></canvas></div></div></div></div><div class="output_area" style="display: none;"><div class="prompt"></div><div class="output_subarea"></div></div></div><div class="btn output_collapsed" title="click to expand output" style="display: none;">. . .</div></div></div><div class="end_space"></div></div></div>
+        <div id="pager_splitter" class="ui-draggable border-box-sizing ui-widget ui-state-default" title="Click to Show/Hide pager area, drag to Resize"></div>
+        <div id="pager" class="border-box-sizing" style="height: 227.60000000000002px;">
+            <div id="pager_button_area">
+            <a role="button" title="Open the pager in an external window" class="ui-button" style="position: absolute; right: 20px;"><span class="ui-icon ui-icon-extlink"></span></a><a role="button" title="Close the pager" class="ui-button" style="position: absolute; right: 5px;"><span class="ui-icon ui-icon-close"></span></a></div>
+            <div id="pager-container" class="container border-box-sizing"></div>
+        </div>
+    </div>
+
+</div>
+<div id="tooltip" class="ipython_tooltip" style="display:none"><div class="tooltipbuttons"><a href="./mhacks-demo_files/mhacks-demo.html" role="button" class="ui-button"><span class="ui-icon ui-icon-close">Close</span></a><a href="./mhacks-demo_files/mhacks-demo.html" class="ui-corner-all" role="button" id="expanbutton" title="Grow the tooltip vertically (press tab 2 times)" style=""><span class="ui-icon ui-icon-plus">Expand</span></a><a href="./mhacks-demo_files/mhacks-demo.html" role="button" class="ui-button" title="show the current docstring in pager (press tab 4 times)"><span class="ui-icon ui-icon-arrowstop-l-n">Open in Pager</span></a><a href="./mhacks-demo_files/mhacks-demo.html" role="button" class="ui-button" title="Tootip is not dismissed while typing for 10 seconds" style="display: none;"><span class="ui-icon ui-icon-clock">Close</span></a></div><div class="pretooltiparrow"></div><div class="tooltiptext smalltooltip"></div></div>
+
+
+
+</div>
+
+<script src="./mhacks-demo_files/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/namespace.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/page.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/loginwidget.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+
+    
+
+
+<script src="./mhacks-demo_files/codemirror.js" charset="utf-8"></script>
+<script type="text/javascript">
+    CodeMirror.modeURL = "/static/components/codemirror/mode/%N/%N.js";
+</script>
+<script src="./mhacks-demo_files/loadmode.js" charset="utf-8"></script>
+<script src="./mhacks-demo_files/multiplex.js" charset="utf-8"></script>
+<script src="./mhacks-demo_files/overlay.js" charset="utf-8"></script>
+<script src="./mhacks-demo_files/matchbrackets.js" charset="utf-8"></script>
+<script src="./mhacks-demo_files/comment.js" charset="utf-8"></script>
+<script src="./mhacks-demo_files/htmlmixed.js" charset="utf-8"></script>
+<script src="./mhacks-demo_files/xml.js" charset="utf-8"></script>
+<script src="./mhacks-demo_files/javascript.js" charset="utf-8"></script>
+<script src="./mhacks-demo_files/css.js" charset="utf-8"></script>
+<script src="./mhacks-demo_files/rst.js" charset="utf-8"></script>
+<script src="./mhacks-demo_files/markdown.js" charset="utf-8"></script>
+<script src="./mhacks-demo_files/gfm.js" charset="utf-8"></script>
+<script src="./mhacks-demo_files/python.js" charset="utf-8"></script>
+<script src="./mhacks-demo_files/codemirror-ipython.js" charset="utf-8"></script>
+
+<script src="./mhacks-demo_files/highlight.pack.js" charset="utf-8"></script>
+
+<script src="./mhacks-demo_files/date.format.js" charset="utf-8"></script>
+
+<script src="./mhacks-demo_files/events.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/utils.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/dialog.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/layoutmanager.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/mathjaxutils.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/outputarea.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/cell.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/celltoolbar.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/codecell.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/completer.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/textcell.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/kernel.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/savewidget.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/quickhelp.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/pager.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/menubar.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/toolbar.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/maintoolbar.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/notebook.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/notificationwidget.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/notificationarea.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/tooltip.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/config.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/main.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="./mhacks-demo_files/contexthint.js" charset="utf-8"></script>
+
+<script src="./mhacks-demo_files/default.js" type="text/javascript" charset="utf-8"></script>
+<script src="./mhacks-demo_files/slideshow.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+<script src="./mhacks-demo_files/custom.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+<div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Size1, monospace;">() [] {} </div><canvas class="vega_hidden" width="1" height="1" style="display: none;"></canvas><canvas class="vega_hidden" width="1" height="1" style="display: none;"></canvas><canvas class="vega_hidden" width="1" height="1" style="display: none;"></canvas><canvas class="vega_hidden" width="1" height="1" style="display: none;"></canvas><canvas class="vega_hidden" width="1" height="1" style="display: none;"></canvas><canvas class="vega_hidden" width="1" height="1" style="display: none;"></canvas><canvas class="vega_hidden" width="1" height="1" style="display: none;"></canvas><canvas class="vega_hidden" width="1" height="1" style="display: none;"></canvas><canvas class="vega_hidden" width="1" height="1" style="display: none;"></canvas><canvas class="vega_hidden" width="1" height="1" style="display: none;"></canvas><div><style id="PKT_BM_STYLE">			#PKT_BM_OVERLAY			{				visibility:hidden;				position:fixed;				top:0px !important;				left:0px !important;				width:100% !important;				height:80px;				-webkit-box-shadow:0px 0px 20px rgba(0,0,0,0.4);				-moz-box-shadow:0px 0px 20px rgba(0,0,0,0.4);				-o-box-shadow:0px 0px 20px rgba(0,0,0,0.4);				box-shadow:0px 0px 20px rgba(0,0,0,0.4);				z-index:2147483647;				background: rgb(239,239,239);				background: -moz-linear-gradient(top, rgba(239,239,239,0.98) 0%, rgba(253,253,253,0.98) 100%);				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(239,239,239,0.98)), color-stop(100%,rgba(253,253,253,0.98)));				background: -webkit-linear-gradient(top, rgba(239,239,239,0.98) 0%,rgba(253,253,253,0.98) 100%);				background: -o-linear-gradient(top, rgba(239,239,239,0.98) 0%,rgba(253,253,253,0.98) 100%);				background: -ms-linear-gradient(top, rgba(239,239,239,0.98) 0%,rgba(253,253,253,0.98) 100%);				background: linear-gradient(top, rgba(239,239,239,0.98) 0%,rgba(253,253,253,0.98) 100%);				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#fdfdfd',GradientType=0 );				border-bottom:1px solid white;				font-size:20px !important;				font-family:HelveticaNeue,Helvetica,Arial !important;				line-height:80px !important;				text-align: left;				color: #4b4b4b !important;				-webkit-backface-visibility: hidden;				-webkit-perspective: 1000;			}						#PKT_BM_RAINBOWDASH			{				width: 100%;				height: 6%;			}						#PKT_BM_RAINBOWDASH div			{				float: left;				width: 25%;				height: 100%;			}						#PKT_BM_OVERLAY_LOGO			{				display: block;				width: 200px;				height: 75px;				float: left;				background: url(chrome-extension://niloccemoadcdkdjlinkgdfekeahmflj/img/pocket-logo.png) left center no-repeat;			}			.PKT_mobile #PKT_BM_OVERLAY_LOGO			{				display: none;			}			.PKT_desktop #PKT_BM_OVERLAY_LABEL			{				position: absolute;				top: 0px;				left: 0px;				text-align:center;				width: 100%;				height: 100%;				z-index: -1;				padding: 0px;				line-height:80px !important;				font-weight: bold;			}						#PKT_BM_OVERLAY_WRAPPER			{				padding-left:7%;				padding-right: 7%;				height: 100%;			}						.PKT_BM_BTN			{				float: right;				margin-top: 22px;				margin-left: 20px;				width: 80px;				height: 30px;				line-height: 30px;				visibility:hidden;				border:1px solid #a4a4a4;				text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.7);				-webkit-box-shadow: 0px 1px 0px white;				-moz-box-shadow: 0px 1px 0px white;				-o-box-shadow: 0px 1px 0px white;				box-shadow: 0px 1px 0px white;				-webkit-border-radius: 6px;				-moz-border-radius: 6px;				-o-border-radius: 6px;				border-radius: 6px;				text-align:center !important;				font-size:0.7em !important;				color:black !important;				font-weight:bold !important;				background: rgb(250,213,64);				background: -moz-linear-gradient(top, rgba(250,213,64,1) 0%, rgba(251,182,74,1) 100%);				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(250,213,64,1)), color-stop(100%,rgba(251,182,74,1)));				background: -webkit-linear-gradient(top, rgba(250,213,64,1) 0%,rgba(251,182,74,1) 100%);				background: -o-linear-gradient(top, rgba(250,213,64,1) 0%,rgba(251,182,74,1) 100%);				background: -ms-linear-gradient(top, rgba(250,213,64,1) 0%,rgba(251,182,74,1) 100%);				background: linear-gradient(top, rgba(250,213,64,1) 0%,rgba(251,182,74,1) 100%);				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fad540', endColorstr='#fbb64a',GradientType=0 );				text-decoration: none !important;			}			.PKT_BM_BTN:hover			{				background: rgb(251,182,74);				background: -moz-linear-gradient(top, rgba(251,182,74,1) 0%, rgba(250,213,64,1) 100%);				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(251,182,74,1)), color-stop(100%,rgba(250,213,64,1)));				background: -webkit-linear-gradient(top, rgba(251,182,74,1) 0%,rgba(250,213,64,1) 100%);				background: -o-linear-gradient(top, rgba(251,182,74,1) 0%,rgba(250,213,64,1) 100%);				background: -ms-linear-gradient(top, rgba(251,182,74,1) 0%,rgba(250,213,64,1) 100%);				background: linear-gradient(top, rgba(251,182,74,1) 0%,rgba(250,213,64,1) 100%);				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbb64a', endColorstr='#fad540',GradientType=0 );				cursor: pointer;			}			.PKT_BM_BTN.gray			{				background: #f9f9f9;				background: -moz-linear-gradient(top, #f9f9f9 0%, #ebecec 100%);				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f9f9), color-stop(100%,#ebecec));				background: -webkit-linear-gradient(top, #f9f9f9 0%,#ebecec 100%);				background: -o-linear-gradient(top, #f9f9f9 0%,#ebecec 100%);				background: -ms-linear-gradient(top, #f9f9f9 0%,#ebecec 100%);				background: linear-gradient(top, #f9f9f9 0%,#ebecec 100%);				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#ebecec',GradientType=0 );			}			.PKT_BM_BTN.gray:hover			{				background: #ebecec;				background: -moz-linear-gradient(top, #ebecec 0%, #f9f9f9 100%);				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebecec), color-stop(100%,#f9f9f9));				background: -webkit-linear-gradient(top, #ebecec 0%,#f9f9f9 100%);				background: -o-linear-gradient(top, #ebecec 0%,#f9f9f9 100%);				background: -ms-linear-gradient(top, #ebecec 0%,#f9f9f9 100%);				background: linear-gradient(top, #ebecec 0%,#f9f9f9 100%);				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebecec', endColorstr='#f9f9f9',GradientType=0 );			}			.PKT_BM_BTN.pkt_green			{				background: #81dbd6;				background: -moz-linear-gradient(top, #81dbd6 0%, #74c5c1 100%);				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#81dbd6), color-stop(100%,#74c5c1));				background: -webkit-linear-gradient(top, #81dbd6 0%,#74c5c1 100%);				background: -o-linear-gradient(top, #81dbd6 0%,#74c5c1 100%);				background: -ms-linear-gradient(top, #81dbd6 0%,#74c5c1 100%);				background: linear-gradient(top, #81dbd6 0%,#74c5c1 100%);				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#81dbd6', endColorstr='#74c5c1',GradientType=0 );			}			.PKT_BM_BTN.pkt_green:hover			{				background: #74c5c1;				background: -moz-linear-gradient(bottom, #81dbd6 0%, #74c5c1 100%);				background: -webkit-gradient(linear, left bottom, left bottom, color-stop(0%,#81dbd6), color-stop(100%,#74c5c1));				background: -webkit-linear-gradient(bottom, #81dbd6 0%,#74c5c1 100%);				background: -o-linear-gradient(bottom, #81dbd6 0%,#74c5c1 100%);				background: -ms-linear-gradient(bottom, #81dbd6 0%,#74c5c1 100%);				background: linear-gradient(bottom, #81dbd6 0%,#74c5c1 100%);				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#74c5c1', endColorstr='#81dbd6',GradientType=0 );			}			.PKT_BM_BTN div			{				display: block;			}			#PKT_FORM			{				height: 100%;				width: 100%; 				display: block !important;				visibility: visible !important;				margin: 0px !important;				padding: 0px !important;				font-size: 20px !important;			}			.PKT_mobile #PKT_FORM{				position: absolute;				top: 0px;				right: 0.5em;				width: 86%;			}			.PKT_mobile #PKT_BM_BTN{				margin-top: 17px !important;			}			.PKT_mobile #PKT_BM_VL_BTN{				display: none;			}			#PKT_BM_OVERLAY_INPUT			{				display: none;			}			.PKT_SHOW_INPUT #PKT_BM_OVERLAY_INPUT			{				position: absolute !important;				display: block !important;				top: 19px !important;				left: 0% !important;				width: 57%;				height: 25px !important;				border: 1px solid #c9c9c9 !important;				margin: 0px !important;				padding: 0px 0px 0px 5px !important;				font-size: 15px !important;				color: #666666 !important;				background: white !important;				line-height: normal;								/* overrides */				font-family: Arial !important;				-webkit-box-shadow: none !important;				-moz-box-shadow: none !important;				box-shadow: none !important;				-webkit-border-radius: 0px !important;				-moz-border-radius: 0px !important;				border-radius: 0px !important;			}			.PKT_desktop #PKT_BM_OVERLAY_INPUT			{				position: static !important;				width: 305px !important;			}			#PKT_BM_OVERLAY_INPUT_CONTAINER {				float: right;				margin-top: 24px !important;				position: static !important;				width: 305px !important;				margin-right: 10px;			}			.PKT_SHOW_INPUT #PKT_BM_OVERLAY_LABEL			{				visibility: hidden;			}									/* Autcomplete.js css file */			.aListCon {				display : none;			}			.aWrapper {				color: #666666 !important;				float: right;				position: static !important;				width: 305px !important;				display: block !important;				top: 0px !important;				left: 0px !important;				zoom : 1;				height : 0px;				vertical-align : top;				overflow : visible;			}			.aCon {				position : relative !important;				z-index : 999999 !important;				top : 0px !important;				display : block !important;				margin-top: 0px !important;			}			.aList {				display : block !important;				margin : 0px !important;				padding : 0px !important;				border : 1px solid #7f9db9 !important;				background-color : #fff !important;				color : #1a2731 !important;				list-style-type : none !important;				cursor : default !important;;				font-family:HelveticaNeue,Helvetica,Arial !important;				font-size: 15px !important;			}			.aLim {				display : block !important;				padding : 3px 6px 2px 6px !important;				line-height : 1.2em !important;				white-space : nowrap !important;			}			</style>						</div></body></html>
